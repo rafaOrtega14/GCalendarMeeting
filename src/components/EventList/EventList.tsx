@@ -4,14 +4,12 @@ import { GoogleCalendarEvents, CalendarEvent, Event } from '../../services/GCale
 import './EventList.css';
 import 'react-toastify/dist/ReactToastify.css';
 
-const googleCalendarService = GoogleCalendarEvents.getInstance(
-  localStorage.getItem('googleToken'),
-  process.env.REACT_APP_GOOGLE_CALENDAR_ID ?? ''
-);
-
 const EventList: React.FC = () => {
   const [events, setEvents] = useState<Event[]>([]);
-
+  const googleCalendarService = GoogleCalendarEvents.getInstance(
+    localStorage.getItem('googleToken'),
+    process.env.REACT_APP_GOOGLE_CALENDAR_ID ?? ''
+  );
   useEffect(() => {
     if(events.length === 0) {
       compareCalendarEvents()
