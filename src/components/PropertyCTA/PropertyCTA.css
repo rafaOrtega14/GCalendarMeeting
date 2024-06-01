@@ -1,0 +1,43 @@
+.cta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5af19, #f12711);
+    color: #fff;
+    text-align: center;
+  }
+  
+  .cta-content {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cta-title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .cta-description {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+  }
+  
+  .cta-button {
+    background-color: #ff7f50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff4500;
+  }
+  
