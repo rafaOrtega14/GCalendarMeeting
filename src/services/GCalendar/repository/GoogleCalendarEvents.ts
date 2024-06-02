@@ -18,7 +18,7 @@ export class GoogleCalendarEvents {
   initateEvents = (): Event[] => {
     let initEvents: Event[] = []
     const days = getNextWeekdays(new Date())
-    const nineToFiveAvailableSlots = ['09:00 AM - 11:00 AM', '12:00 PM - 02:00 PM', '03:00 PM - 05:00 PM']
+    const nineToFiveAvailableSlots = ['09:00 - 11:00', '12:00 - 14:00', '15:00 - 17:00']
     days.forEach(day => {
       nineToFiveAvailableSlots.forEach((timeSlot, i) => {
         initEvents.push({ id: `${day.day}#${i}`, title: day.day, date: day.date, time: timeSlot })
@@ -37,7 +37,6 @@ export class GoogleCalendarEvents {
         "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
       ]
     }
-    console.log(config)
     const apiCalendar = new ApiCalendar(config)
     return apiCalendar
   }

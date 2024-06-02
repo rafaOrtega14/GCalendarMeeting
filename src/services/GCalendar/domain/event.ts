@@ -8,7 +8,13 @@ export type Event = {
 export type CalendarEvent = {
     start: {
       dateTime: string
-    }
+    },
+    attendees: Array<Attendee>
+}
+
+export type Attendee = {
+  email: string;
+  responseStatus: string;
 }
 
 export type GoogleAuthData = {
