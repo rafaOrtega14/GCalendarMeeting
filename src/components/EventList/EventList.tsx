@@ -19,8 +19,6 @@ const EventList: React.FC = () => {
     }
   })
 
-  /* const hasSomeOneDeclined = calendarEvent.attendees.find(attendee => attendee.responseStatus === 'declined')
-  console.log(hasSomeOneDeclined) */
   const compareCalendarEvents = async () => {
     const defaultEvents = googleCalendarService.initateEvents()
     const calendarEvents = await googleCalendarService.getEvents() as Array<CalendarEvent>
